@@ -8,10 +8,8 @@ const DomElement = function(selector, height, width, bg, fontSize) {
 	 this.bg = bg;
 	 this.fontSize = fontSize;
 }
-const element = new DomElement('.class-name', '100px', '370px', 'red', '16px');
 DomElement.prototype.createTag = function() {
 	const addSelector = function(elem) {
-		elem.textContent = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi in, maxime, exercitationem dolorum soluta incidunt quasi repudiandae ea eaque possimus veritatis voluptatum nostrum accusantium. Ea magnam corrupti sunt sapiente laudantium';
 		elem.style.cssText = `
 			height: ${element.height};
 			width: ${element.width};
@@ -31,4 +29,7 @@ DomElement.prototype.createTag = function() {
 		return p;
 	}
 };
-wrap.append(element.createTag());
+const element = new DomElement('.class-name', '100px', '370px', 'red', '16px');
+const tag = element.createTag();
+tag.textContent = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi in, maxime, exercitationem dolorum soluta incidunt quasi repudiandae ea eaque possimus veritatis voluptatum nostrum accusantium. Ea magnam corrupti sunt sapiente laudantium';
+wrap.append(tag);
