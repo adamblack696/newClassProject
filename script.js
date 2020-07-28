@@ -45,7 +45,6 @@ DomElement.prototype.createTag = function() {
 };
 DomElement.prototype.handler = function() {
 	document.addEventListener('keydown', event => {
-		console.log(event.keyCode);
 		if (event.keyCode === 37) {
 			this.left -= 10;
 			this.elem.style.left = this.left + 'px';
